@@ -13,22 +13,21 @@ export interface FoodQty{
 export interface FoodType{
   value: string;
   viewValue: string;
-  
 }
 
 @Component({
-  selector: 'app-plain',
-  templateUrl: './plain.component.html',
-  styleUrls: ['./plain.component.css']
+  selector: 'app-blueberry',
+  templateUrl: './blueberry.component.html',
+  styleUrls: ['./blueberry.component.css']
 })
-export class PlainComponent {
+export class BlueberryComponent {
 
   constructor(private bagelService: BagelService) { }
 
   foodQty: FoodQty[] = [
-    {value: 'Plain Bagel - Honey Paste           x1            $1.50', viewValue: '1'},
-    {value: 'Plain Bagel - Cream Cheese          x2            $3.00', viewValue: '2'},
-    {value: 'Plain Bagel - Peanut Butter         x3            $4.50', viewValue: '3'},
+    {value: 'Blueberry Bagel - Honey Paste  x1    $1.50', viewValue: '1'},
+    {value: 'Blueberry Bagel - Cream Cheese Paste  x2    $3.00', viewValue: '2'},
+    {value: 'Blueberry Bagel - Peanut Butter Paste  x3    $4.50', viewValue: '3'},
   ];
 
   foodType: FoodType[] = [
@@ -44,4 +43,3 @@ export class PlainComponent {
     this.bagelService.bagelAdded.next(Qtyvalue);
   }
 }
- 

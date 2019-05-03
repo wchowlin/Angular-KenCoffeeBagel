@@ -8,13 +8,13 @@ import { FoodQty } from '../plain/plain.component';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  currentItem: string;
+  items: string[] = [];
 
-  constructor(private bagelService: BagelService) { }
+  constructor(private bagelService: BagelService ) { }
 
   ngOnInit() {
     this.bagelService.bagelAdded.subscribe(foodItem => {
-      this.currentItem = foodItem;
+      this.items.push(foodItem);
     });
   }
 

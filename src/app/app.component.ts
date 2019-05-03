@@ -9,18 +9,5 @@ import { PlainComponent } from './plain/plain.component';
 })
 
 export class AppComponent {
-  title = 'Ken Coffe & Bagels';
-  constructor(public dialog: MatDialog){}
-  
-  openDialog(): void{
-    let dialogRef = this.dialog.open(PlainComponent,{    
-    height: '450px',
-    width: '390px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog is closed');
-    });
-  }
 
 }

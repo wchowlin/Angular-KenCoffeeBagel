@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div [ngStyle]="{background: 'url(assets/whitewood.jpg)'}">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+  <hr>
+  <h2>Please Choose a Type of Bagel:</h2>
+  <button mat-raised-button class ="btn btn-secondary"(click)="openDialogPlainBagel()" ><img src="./assets/plainBagel.PNG"/></button>
+  <button mat-raised-button class ="btn btn-secondary" (click)="openDialogBlueberryBagel()" ><img src="./assets/blueberryBagel.PNG"/></button>
+  <button mat-raised-button class ="btn btn-secondary" (click)="openDialogChocolateBagel()"><img src="./assets/chocolateBagel.PNG"/></button>
+
+  <h2>Would you like Coffee or Tea?</h2>
+  <button mat-raised-button class ="btn btn-secondary" (click)="openDialogCoffeeTea()" ><img src="./assets/coffetea.PNG"/></button>
+
+ <app-shopping-cart></app-shopping-cart>
+ 
+ <button mat-button class="square" onclick="window.location.href = 'https://squareup.com/us/en/payments';"> <font size="+2">Purchase</font></button>

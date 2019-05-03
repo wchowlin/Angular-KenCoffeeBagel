@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { Component,OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { BagelService } from '../bagel.service';
 import { MatSelect, MatRadioButton, MatRadioGroup } from '@angular/material';
@@ -15,26 +15,23 @@ export interface FoodType{
   viewValue: string;
   
 }
-
 @Component({
-  selector: 'app-plain',
-  templateUrl: './plain.component.html',
-  styleUrls: ['./plain.component.css']
+  selector: 'app-coffeetea',
+  templateUrl: './coffeetea.component.html',
+  styleUrls: ['./coffeetea.component.css']
 })
-export class PlainComponent {
+export class CoffeeteaComponent{
 
   constructor(private bagelService: BagelService) { }
 
   foodQty: FoodQty[] = [
-    {value: 'Plain Bagel - Honey Paste           x1            $1.50', viewValue: '1'},
-    {value: 'Plain Bagel - Cream Cheese          x2            $3.00', viewValue: '2'},
-    {value: 'Plain Bagel - Peanut Butter         x3            $4.50', viewValue: '3'},
+    {value: 'Coffee       x1        $1.00', viewValue: '1'},
+    {value: 'Tea          x2        $1.50', viewValue: '2'},
   ];
 
   foodType: FoodType[] = [
-    {value: '1-qty', viewValue: 'Honey Paste'},
-    {value: '2-qty', viewValue: 'Cream Cheese'},
-    {value: '3-qty', viewValue: 'Peanut Butter'},
+    {value: '1-qty', viewValue: 'Coffee'},
+    {value: '2-qty', viewValue: 'Tea'},
   ];
     
 
@@ -43,5 +40,5 @@ export class PlainComponent {
     const Qtyvalue = foodSelect.value;
     this.bagelService.bagelAdded.next(Qtyvalue);
   }
+
 }
- 

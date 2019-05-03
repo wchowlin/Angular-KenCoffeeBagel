@@ -1,0 +1,12 @@
+div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:100%;
+    width: 100%;
+}
+
+.square{
+    position:absolute; right:80px; bottom:20px;
+}

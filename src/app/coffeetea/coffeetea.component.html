@@ -1,12 +1,11 @@
-<h2 mat-dialog-title><font size="+2">Plain Bagel</font></h2>
+<h2 mat-dialog-title><font size="+2">Coffee Or Tea</font></h2>
 <hr>
-<mat-dialog-content class = "Schmear">
-    <font size="+2"> Please Choose Schmear: </font>
+<mat-dialog-content class = "Coffee or Tea?">
 </mat-dialog-content>
 <mat-form-field>
   <mat-select #foodSelect>
     <mat-option *ngFor="let food of foodType" [value]="food.value">
-        <font size="+2">{{food.viewValue}}</font>
+      {{food.viewValue}}
     </mat-option>
   </mat-select>
 </mat-form-field>
@@ -18,12 +17,12 @@
 <mat-form-field>
     <mat-select #foodSelect>
       <mat-option *ngFor="let food of foodQty" [value]="food.value">
-          <font size="+2">{{food.viewValue}}</font>
+        {{food.viewValue}}
       </mat-option>
     </mat-select>
 </mat-form-field>
 <br>
 
+
+
 <button class ='primary' (click)="submit(foodSelect)"><font size="+2">Confirm</font></button>
-
-
